@@ -1,3 +1,17 @@
 <resources>
     <string name="app_name">ArtSpace</string>
+    <string name="picname1">Tigre</string>
+    <string name="autor1">Kawanabe Kyosai</string>
+
+    <string name="picname2">La gran ola de Kanagawa</string>
+    <string name="autor2">Katsushika Hokusai</string>
+
+    <string name="picname3">Amanecer sobre el mar oriental</string>
+    <string name="autor3">Fujishima Takeji</string>
+
+    <string name="picname4">Fuji rojo</string>
+    <string name="autor4">Katsushika Hokusai</string>
+
+    <string name="picname5">A.K.A. Gero Tan: Noah´s Ark</string>
+    <string name="autor5">Takashi Murakami</string>
 </resources>
