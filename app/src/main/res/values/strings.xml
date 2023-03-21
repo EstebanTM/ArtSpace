@@ -14,4 +14,7 @@
 
     <string name="picname5">A.K.A. Gero Tan: Noah´s Ark</string>
     <string name="autor5">Takashi Murakami</string>
+
+    <string name="preview">Anterior</string>
+    <string name="next">Siguiente</string>
 </resources>
