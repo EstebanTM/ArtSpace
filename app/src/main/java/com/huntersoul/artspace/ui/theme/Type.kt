@@ -9,12 +9,13 @@ import androidx.compose.ui.unit.sp
 import com.huntersoul.artspace.R
 
 // Set of Material typography styles to start with
-/*val Typography = Typography(
+val Typography = Typography(
     body1 = TextStyle(
         fontFamily = FontFamily.Default,
         fontWeight = FontWeight.Normal,
         fontSize = 16.sp
-    )*/
+    )
+)
     /* Other default text styles to override
     button = TextStyle(
         fontFamily = FontFamily.Default,
@@ -29,7 +30,7 @@ import com.huntersoul.artspace.R
 )
 */
 
-val Sansita = FontFamily(
+/*val Sansita = FontFamily(
     Font(R.font.sansita_swashed, FontWeight.Normal),
     Font(R.font.sansita_swashed_semibold, FontWeight.Bold)
 )
@@ -51,6 +52,7 @@ val Typography = Typography(
 
     body1 = TextStyle(
         fontWeight = FontWeight.Normal,
-        fontSize = 16.sp
+        fontSize = 14.sp
     )
 )
+*/

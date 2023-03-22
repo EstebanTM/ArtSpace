@@ -5,6 +5,7 @@ import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.*
+import androidx.compose.foundation.layout.Arrangement.SpaceBetween
 import androidx.compose.material.Button
 import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Surface
@@ -35,40 +36,45 @@ class MainActivity : ComponentActivity() {
     }
 }
 @Composable
-fun ArtSpace(modifier: Modifier = Modifier){
-    var imageIndex by remember { mutableStateOf(0) }
+fun ArtSpace(modifier: Modifier = Modifier,){
+    var index by remember { mutableStateOf(0) }
     val images = listOf(R.drawable.artpic1, R.drawable.artpic2, R.drawable.artpic3, R.drawable.artpic4, R.drawable.artpic5)
+    val names = listOf(R.string.picname1,R.string.picname2,R.string.picname3,R.string.picname4,R.string.picname5)
+    val autor = listOf(R.string.autor1,R.string.autor2,R.string.autor3,R.string.autor4,R.string.autor5)
     //
         Column(
             modifier = modifier,
             horizontalAlignment = Alignment.CenterHorizontally
         ) {
-            Image(painter = painterResource(id = images[imageIndex]), contentDescription = null)
-            Text(text = stringResource(id = R.string.picname1))
-            Text(text = stringResource(id = R.string.autor1))
+            Image(painter = painterResource(id = images[index]), contentDescription = null)
+            Text(text = stringResource(id = names[index]))
+            Text(text = stringResource(id = autor[index]))
             Spacer(
                 modifier = Modifier.height((16.dp))
             )
-            Row() {
+            Row(
+                modifier = Modifier.fillMaxWidth().padding(16.dp),
+                horizontalArrangement = Arrangement.SpaceAround
+            ) {
                 Button(
                     onClick = {
-                        if (imageIndex == 1) {
-                            imageIndex = (5)
+                        if (index == 0) {
+                            index = (4)
                         } else {
-                            imageIndex = (imageIndex - 1)
+                            index = (index - 1)
                         }
                     },
-                    modifier = Modifier.size(40.dp, 16.dp)
+                    modifier = Modifier.size(120.dp, 40.dp),
                 ) { Text(stringResource(R.string.preview)) }
                 Button(
                     onClick = {
-                        if (imageIndex==5){
-                            imageIndex = (1)
+                        if (index==4){
+                            index = (0)
                         }else{
-                            imageIndex = (imageIndex + 1)
+                            index = (index + 1)
                         }
                     },
-                    modifier = Modifier.size(40.dp, 16.dp)
+                    modifier = Modifier.size(120.dp, 40.dp)
                 ) { Text(stringResource(R.string.next)) }
             }
         }
